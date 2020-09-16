@@ -1,0 +1,76 @@
+body{
+    background-color: white;
+    background-image: url('img/mall.jpg');
+}
+
+.container{
+    min-width: 1000px;
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(32, 33, 82, 0.966);
+}
+
+.nav-bar{
+    height: fit-content;
+    width: 100%;
+    background-color: black;
+}
+
+.nav-bar .welcome-search{
+    display: block;
+    height: fit-content;
+    width: 100%;
+}
+.nav-bar .welcome-search .wlc_msg{
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+    color: white;
+}
+
+.nav-bar .welcome-search .search-bar{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+.nav-bar input{
+    width: 300%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    padding: 5px 20px 5px 40px;
+  }
+
+.nav-bar .main-menu ul{
+    background-color:#191c3aec;
+    margin-top: 0%;
+}
+
+
+.nav-bar ul{
+    background-color: black;
+    height: fit-content;
+    width: 100%;
+}
+.nav-bar ul li{
+    display: inline-block;
+}
+.nav-bar .main-menu ul li{
+    display: inline-block;
+    padding: 5px;
+    margin-right: 40px;  
+}
+.nav-bar ul li a{
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bar .main-menu  ul li:hover{
+    color: white;
+    background-color:black;
+}

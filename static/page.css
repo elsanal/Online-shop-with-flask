@@ -1,0 +1,29 @@
+.categorie-title{
+    width: 100%;
+    background-color:orangered;
+    
+}
+.categorie-title p{
+    padding: 5px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.categorie{
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+    grid-template-columns: auto auto auto auto;
+}
+.categorie .col-row{
+    height: fit-content;
+    /* width: 215px; */
+    margin: 24px;
+    background-color: white;
+    border-radius: 5px;
+}
+.categorie .col-row img{
+    height: 300px;
+    width: 200px;
+}
