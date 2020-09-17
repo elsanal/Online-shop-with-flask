@@ -1,0 +1,74 @@
+{% extends "home/layout.html" %}
+{% block content %}
+<div class="categorie-title">
+    <p>Nouveaux sac à main</p>
+</div>
+<div class="categorie">
+    {%for index in range(0,4)%}
+    <div class="col-row">
+        <img src="{{url_for('static',filename='img_bags/bag2.jpeg')}}" alt="Artiste de valeur">
+        <div class="product-name">
+            <h4>product name</h4>
+            <h4>prix du produit</h6>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+<div class="categorie-title">
+    <p>Sac à main pour Femme</p>
+</div>
+<div class="categorie">
+    {%for index in range(0,4)%}
+    <div class="col-row">
+        <img src="{{url_for('static',filename='img_bags/bag2.jpeg')}}" alt="Artiste de valeur">
+        <div class="product-name">
+            <h4>product name</h4>
+            <h4>prix du produit</h6>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+<div class="categorie-title">
+    <p>Sac pour Hommes</p>
+</div>
+<div class="categorie">
+    {%for index in range(0,4)%}
+    <div class="col-row">
+        <img src="{{url_for('static',filename='img_bags/bag5.jpeg')}}" alt="Artiste de valeur">
+        <div class="product-name">
+            <h4>product name</h4>
+            <h4>prix du produit</h6>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+<div class="categorie-title">
+    <p>Sac à dos pour enfant</p>
+</div>
+<div class="categorie">
+    {%for index in range(0,4)%}
+    <div class="col-row">
+        <img src="{{url_for('static',filename='img_bags/bag2.jpeg')}}" alt="Artiste de valeur">
+        <div class="product-name">
+            <h4>product name</h4>
+            <h4>prix du produit</h6>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+<div class="categorie-title">
+    <p>Sac de voyage</p>
+</div>
+<div class="categorie">
+    {%for index in range(0,4)%}
+    <div class="col-row">
+        <img src="{{url_for('static',filename='img_bags/bag4.jpeg')}}" alt="Artiste de valeur">
+        <div class="product-name">
+            <h4>product name</h4>
+            <h4>prix du produit</h6>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+
+{% endblock content%}

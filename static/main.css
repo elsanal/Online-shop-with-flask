@@ -1,6 +1,6 @@
 body{
     background-color: white;
-    background-image: url('img/mall.jpg');
+    background-image: url('img/container.jpg');
 }
 
 .container{
@@ -8,6 +8,7 @@ body{
     height: fit-content;
     width: 100%;
     background-color: rgba(32, 33, 82, 0.966);
+    opacity: 1;
 }
 
 .nav-bar{

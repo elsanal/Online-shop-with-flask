@@ -14,10 +14,6 @@ def index():
 def about():
     return render_template("/home/about.html")
 
-@app.route("/home/computer")
-def computer():
-    return render_template("/home/computer.html")
-
 @app.route("/home/phone")
 def phone():
     return render_template("/home/phone.html")
@@ -34,17 +30,11 @@ def clothe():
 def bag():
     return render_template("/home/bag.html")
 
-@app.route("/home/electronic")
-def electronic():
-    return render_template("/home/electronic.html")
 
-@app.route("/home/construction")
-def construction():
-    return render_template("/home/construction.html")
+@app.route("/home/pant")
+def pant():
+    return render_template("/home/pant.html")
 
-@app.route("/home/agro_bussiness")
-def agro_bussiness():
-    return render_template("/home/agro_bussiness.html")
 
 @app.route("/home/shoe")
 def shoe():

@@ -18,12 +18,24 @@
 }
 .categorie .col-row{
     height: fit-content;
-    /* width: 215px; */
     margin: 24px;
     background-color: white;
     border-radius: 5px;
 }
 .categorie .col-row img{
-    height: 300px;
+    border-radius: 5px;
+    height: 250px;
     width: 200px;
+}
+.categorie .col-row .product-name{
+    background-color: rgba(32, 33, 82, 0.966);
+    text-align: center;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+}
+.product-name h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
 }
