@@ -1,9 +1,9 @@
 from flask import Flask, render_template, url_for, request,redirect, flash
-
-
+from categorie import categorie, sub_categorie
+from forms import New_Item
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'b148fa19990c223482e18e1e639f25af'
 
 @app.route("/")
 @app.route("/home/index")
@@ -43,6 +43,19 @@ def shoe():
 @app.route("/home/other")
 def other():
     return render_template("/home/other.html")
+
+
+
+@app.route("/upload_items/upload_item", methods=['GET', 'POST'])
+def new_item():
+    form = New_Item()
+    if form.validate_on_submit():
+        print(form.product_name)
+        print(form.product_price)
+        print(form.description)
+        return redirect(url_for('index'))
+    return render_template("/upload_items/upload_item.html", 
+                           categorie = categorie, sub_categorie = sub_categorie, form = form)
 
 if __name__ == "__main__":
     app.run(debug= True)

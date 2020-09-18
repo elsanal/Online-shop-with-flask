@@ -39,3 +39,15 @@
     font-size: 14px;
     font-style: normal;
 }
+
+.content-section{
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 40%;
+    
+}
+.section{
+    height: fit-content;
+    padding: 15px;
+    background-color: wheat;
+}
