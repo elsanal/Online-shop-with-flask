@@ -17,3 +17,15 @@ class New_Item(FlaskForm):
     pictures = FileField('Choisir les photos du produit')
     order = order
     submit = SubmitField('Mettre en ligne')
+    
+class Login(FlaskForm):
+    email = StringField('Entrez votre email', validators = [DataRequired(), Email()])
+    password = PasswordField('Entrez votre mot de passe', validators = [DataRequired(),Length(min = 8)])
+    submit = SubmitField('Se connecter')
+    
+class Register(FlaskForm):
+    email = StringField('Entrez votre email', validators = [DataRequired(),Email()])
+    password = PasswordField('Entrez un mot de passe', validators = [DataRequired(),Length(min = 8)])
+    confirm_password = PasswordField('Confirmez votre mot de passe',
+                                     validators = [DataRequired(), EqualTo('password')])
+    submit = SubmitField('Créez un compte')
