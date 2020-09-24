@@ -1,3 +1,83 @@
+{%if admin == 'admin'%}
+{% extends "admin/admin.html" %}
+{% block content1 %}
+    <div class="categorie-title">
+        <p>Nouveaux sac à main</p>
+    </div>
+    <div class="categorie">
+        {%for index in range(0,4)%}
+        <div class="col-row">
+            <img src="{{url_for('static',filename='img_bags/bag2.jpeg')}}" alt="Artiste de valeur">
+            <div class="product-name">
+                <h4>product name</h4>
+                <h4>prix du produit</h4>
+                <h4>supprimer le produit</h4>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <div class="categorie-title">
+        <p>Ordinateurs</p>
+    </div>
+    <div class="categorie">
+        {%for index in range(0,4)%}
+        <div class="col-row">
+            <img src="{{url_for('static',filename='img_computer/mac.jpg')}}" alt="Artiste de valeur">
+            <div class="product-name">
+                <h4>product name</h4>
+                <h4>prix du produit</h4>
+                <h4>supprimer le produit</h4>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <div class="categorie-title">
+        <p>Nouveaux models de pantalons</p>
+    </div>
+    <div class="categorie">
+        {%for index in range(0,4)%}
+        <div class="col-row">
+            <img src="{{url_for('static',filename='img_pants/pant1.jpg')}}" alt="Artiste de valeur">
+            <div class="product-name">
+                <h4>product name</h4>
+                <h4>prix du produit</h4>
+                <h4>supprimer le produit</h4>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <div class="categorie-title">
+        <p>Nouvelles montres</p>
+    </div>
+    <div class="categorie">
+        {%for index in range(0,4)%}
+        <div class="col-row">
+            <img src="{{url_for('static',filename='img_watch/watch9.jpg')}}" alt="Artiste de valeur">
+            <div class="product-name">
+                <h4>product name</h4>
+                <h4>prix du produit</h4>
+                <h4>supprimer le produit</h4>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <div class="categorie-title">
+        <p>Telephones originaux</p>
+    </div>
+    <div class="categorie">
+        {%for index in range(0,4)%}
+        <div class="col-row">
+            <img src="{{url_for('static',filename='img_phone/huawei.jpg')}}" alt="Artiste de valeur">
+            <div class="product-name">
+                <h4>product name</h4>
+                <h4>prix du produit</h4>
+                <h4>supprimer le produit</h4>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+{% endblock content1%}
+{%else%}
 {% extends "home/layout.html" %}
 {% block content %}
     <div class="categorie-title">
@@ -71,3 +151,7 @@
         {%endfor%}
     </div>
 {% endblock content%}
+{%endif%}
+
+
+

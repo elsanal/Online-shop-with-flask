@@ -23,35 +23,44 @@
                                     <div class="wlc_msg">
                                         <p>Bienvenue sur Alishop</p>
                                     </div>
-                                    <span><a href="{{url_for('login')}}">admin</a></span>
                                 </li>
                                 <li>
                                     <div class="search-bar">
                                         <input type="text">
                                     </div>
                                 </li>
+                                <li>
+                                    <div class="wlc_msg">
+                                        <p>Ajouter</p>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                         <div class="main-menu">
                             <ul>
-                                <li><a href="{{url_for('index', admin = 'no')}}">Acceuil</a></li>
-                                <li><a href="{{url_for('bag', admin = 'no')}}">Sac à main</a></li>
-                                <li><a href="{{url_for('shoe', admin = 'no')}}">Chaussures</a></li>
-                                <li><a href="{{url_for('clothe', admin = 'no')}}">Habits</a></li>
-                                <li><a href="{{url_for('pant', admin = 'no')}}">Pantalons</a></li>
-                                <li><a href="{{url_for('watch', admin = 'no')}}">Montres</a></li>
-                                <li><a href="{{url_for('phone', admin = 'no')}}">Telephones</a></li>
-                                <li><a href="{{url_for('other', admin = 'no')}}">Divers</a></li>
-                                <li><a href="{{url_for('about', admin = 'no')}}">Contact</a></li>
+                                <li><a href="{{url_for('index', admin = 'admin')}}">Acceuil</a></li>
+                                <li><a href="{{url_for('bag', admin = 'admin')}}">Sac à main</a></li>
+                                <li><a href="{{url_for('shoe', admin = 'admin')}}">Chaussures</a></li>
+                                <li><a href="{{url_for('clothe', admin = 'admin')}}">Habits</a></li>
+                                <li><a href="{{url_for('pant', admin = 'admin')}}">Pantalons</a></li>
+                                <li><a href="{{url_for('watch', admin = 'admin')}}">Montres</a></li>
+                                <li><a href="{{url_for('phone', admin = 'admin')}}">Telephones</a></li>
+                                <li><a href="{{url_for('other', admin = 'admin')}}">Divers</a></li>
+                                <li><a href="{{url_for('about', admin = 'admin')}}">Contact</a></li>
                             </ul>
                         </div>
                 </nav>
             </header>
             <main>
-                <div>
+                <!-- <div>
                     {% block content %}
                     
                     {% endblock content%}
+                </div> -->
+                <div>
+                    {% block content1 %}
+                    
+                    {% endblock content1%}
                 </div>
             </main>
         </div>

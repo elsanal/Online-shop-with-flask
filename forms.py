@@ -19,8 +19,9 @@ class New_Item(FlaskForm):
     submit = SubmitField('Mettre en ligne')
     
 class Login(FlaskForm):
-    email = StringField('Entrez votre email', validators = [DataRequired(), Email()])
-    password = PasswordField('Entrez votre mot de passe', validators = [DataRequired(),Length(min = 8)])
+    email = StringField('Entrez votre email', validators = [DataRequired(), Email(),])
+    password = StringField('Entrez votre email', validators = [DataRequired(), Email(),])
+    password = PasswordField('Entrez votre mot de passe', validators = [DataRequired(),Length(min = 8),])
     submit = SubmitField('Se connecter')
     
 class Register(FlaskForm):
