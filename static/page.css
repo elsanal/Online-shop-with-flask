@@ -51,3 +51,11 @@
     padding: 15px;
     background-color: wheat;
 }
+.admin_home{
+    color: white;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 200px;
+    padding-bottom: 200px;
+    
+}

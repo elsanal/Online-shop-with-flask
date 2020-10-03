@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, request,redirect, flash
 from categorie import categorie, sub_categorie
-from forms import New_Item, Login, Register
+from forms import (New_Item, Login, Register, AddBag, AddPhone,
+                   AddClothe, AddOther, AddPant, AddSheo, AddWatch)
 import firebase_admin
 from firebase import storage, Firebase 
 from firebase_admin import credentials
@@ -29,20 +30,72 @@ database = firebase.database()
 isAdmin = False
 
 @app.route("/")
-@app.route("/home/index/<string:admin>")
 @app.route("/home/index")
-def index(admin):   
-    return render_template('home/index.html', admin = admin)
+def index():   
+    return render_template('home/index.html')
 
 @app.route("/home/about")
 def about():
     return render_template("/home/about.html")
+#####################################################################################
 
-
+######################################################################################
 @app.route("/admin/admin")
 def admin():
     return render_template("/admin/admin.html")
 
+@app.route("/admin/addBag",methods=['GET', 'POST'])
+def addBag():
+    form = AddBag()
+    if form.validate_on_submit():
+        return redirect(url_for('bag',admin = 'admin'))
+    return render_template("/admin/addBag.html", form = form)
+
+@app.route("/admin/addClothe",methods=['GET', 'POST'])
+def addClothe():
+    form = AddClothe()
+    if form.validate_on_submit():
+        return redirect(url_for('clothe', admin = admin))
+    return render_template("/admin/addClothe.html", form = form)
+
+@app.route("/admin/addOther",methods=['GET', 'POST'])
+def addOther():
+    form = AddOther()
+    if form.validate_on_submit():
+        return redirect(url_for('other', admin = admin))
+    return render_template("/admin/addOther.html", form = form)
+
+@app.route("/admin/addPant",methods=['GET', 'POST'])
+def addPant():
+    form = AddPant()
+    if form.validate_on_submit():
+        return redirect(url_for('pant', admin = admin))
+    return render_template("/admin/addPant.html", form = form)
+
+@app.route("/admin/addSheo",methods=['GET', 'POST'])
+def addSheo():
+    form = AddSheo()
+    if form.validate_on_submit():
+        return redirect(url_for('sheo', admin = admin))
+    return render_template("/admin/addSheo.html", form = form)
+
+@app.route("/admin/addWatch",methods=['GET', 'POST'])
+def addWatch():
+    form = AddWatch()
+    if form.validate_on_submit():
+        return redirect(url_for('watch', admin = admin))
+    return render_template("/admin/addWatch.html", form = form)
+
+@app.route("/admin/addPhone",methods=['GET', 'POST'])
+def addPhone():
+    form = AddPhone()
+    if form.validate_on_submit():
+        return redirect(url_for('phone', admin = admin))
+    return render_template("/admin/addPhone.html", form = form)
+
+# ##############################################################################
+
+#################################################################################
 @app.route("/home/phone")
 @app.route("/home/phone/<string:admin>")
 def phone(admin):
@@ -66,14 +119,14 @@ def bag(admin):
     return render_template("/home/bag.html", admin = admin)
 
 
-@app.route("/home/other")
+@app.route("/home/pant")
 @app.route("/home/pant/<string:admin>")
 def pant(admin):
     admin = admin
     return render_template("/home/pant.html", admin = admin)
 
 
-@app.route("/home/other")
+@app.route("/home/sheo")
 @app.route("/home/sheo/<string:admin>")
 def shoe(admin):
     return render_template("/home/shoe.html", admin = admin)
@@ -82,6 +135,8 @@ def shoe(admin):
 @app.route("/home/other/<string:admin>")
 def other(admin):
     return render_template("/home/other.html", admin = admin)
+
+#############################################################################
 
 @app.route("/auth/register",methods=['GET', 'POST'])
 def register():

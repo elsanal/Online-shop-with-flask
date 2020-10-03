@@ -21,7 +21,7 @@
                             <ul>
                                 <li>
                                     <div class="wlc_msg">
-                                        <p>Bienvenue sur Alishop</p>
+                                        <p><a href="{{url_for('index')}}">Retournez sur la page cliente</a></p>
                                     </div>
                                 </li>
                                 <li>
@@ -38,7 +38,6 @@
                         </div>
                         <div class="main-menu">
                             <ul>
-                                <li><a href="{{url_for('index', admin = 'admin')}}">Acceuil</a></li>
                                 <li><a href="{{url_for('bag', admin = 'admin')}}">Sac à main</a></li>
                                 <li><a href="{{url_for('shoe', admin = 'admin')}}">Chaussures</a></li>
                                 <li><a href="{{url_for('clothe', admin = 'admin')}}">Habits</a></li>
@@ -46,7 +45,6 @@
                                 <li><a href="{{url_for('watch', admin = 'admin')}}">Montres</a></li>
                                 <li><a href="{{url_for('phone', admin = 'admin')}}">Telephones</a></li>
                                 <li><a href="{{url_for('other', admin = 'admin')}}">Divers</a></li>
-                                <li><a href="{{url_for('about', admin = 'admin')}}">Contact</a></li>
                             </ul>
                         </div>
                 </nav>
@@ -59,9 +57,14 @@
                 </div> -->
                 <div>
                     {% block content1 %}
-                    
+                    <div class="admin_home">
+                        Vous etes sur la page d'administration, vous pouvez supprimer ou ajouter d'autres
+                        produits. Si vous supprimez un produit, vous le verez plus jamais. 
+                        Le mot de passe et l'email doivent rester secrets.
+                    </div>
                     {% endblock content1%}
                 </div>
+               
             </main>
         </div>
        
