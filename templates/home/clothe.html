@@ -10,7 +10,7 @@
         <img src={{item['picture']}} alt="Artiste de valeur">
         <div class="product-name">
             <h4>{{item['product_name']}}</h4>
-            <h4>{{item['product_price']}}</h4>
+            <h4>Prix : {{item['product_price']}}</h4>
             <h4>Modifier</h4>
             <h4>supprimer le produit</h4>
         </div>
@@ -31,7 +31,9 @@
         <img src={{docs[index]['picture']}} alt="Artiste de valeur">
         <div class="product-name">
             <h4>{{docs[index]['product_name']}}</h4>
-            <h4>{{docs[index]['product_price']}}</h4>
+            <h4>Prix : {{docs[index]['product_price']}}</h4>
+            <h4><a href="{{url_for('detail', name = docs[index]['product_name'], price = docs[index]['product_price'],
+                description = docs[index]['description'], picUrl = docs[index]['picture'])}}">Acheter</a></h4>
         </div>
     </div>
     {%endfor%}
@@ -45,7 +47,8 @@
         <img src={{item['picture']}} alt="Artiste de valeur">
         <div class="product-name">
             <h4>{{item['product_name']}}</h4>
-            <h4>{{item['product_price']}}</h4>
+            <h4>Prix : {{item['product_price']}}</h4>
+            <h4><a href="{{url_for('detail', categ = 'bag', index = loop.index-1)}}">Acheter</a></h4>
         </div>
     </div>
     {%endfor%}

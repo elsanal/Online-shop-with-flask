@@ -9,8 +9,8 @@
     <div class="col-row">
         <img src={{item['picture']}} alt="Artiste de valeur">
         <div class="product-name">
-            <h4>{{item['product_name']}}</h4>
-            <h4>{{item['product_price']}}</h4>
+            <h4>{{docs[index]['product_name']}}</h4>
+            <h4>Prix : {{docs[index]['product_price']}}</h4>
             <h4>Modifier</h4>
             <h4>supprimer le produit</h4>
         </div>
@@ -22,20 +22,7 @@
  {%else%}
 {% extends "home/layout.html" %}
 {% block content %}
-<div class="categorie-title">
-    <p>Nouvelles collections</p>
-</div>
-<div class="categorie">
-    {%for index in range(0,1)%}
-    <div class="col-row">
-        <img src={{docs[index]['picture']}} alt="Artiste de valeur">
-        <div class="product-name">
-            <h4>{{docs[index]['product_name']}}</h4>
-            <h4>{{docs[index]['product_price']}}</h4>
-        </div>
-    </div>
-    {%endfor%}
-</div>
+
 <div class="categorie-title">
     <p>Materiels divers</p>
 </div>
@@ -45,7 +32,8 @@
         <img src={{item['picture']}} alt="Artiste de valeur">
         <div class="product-name">
             <h4>{{item['product_name']}}</h4>
-            <h4>{{item['product_price']}}</h4>
+            <h4>Prix : {{item['product_price']}}</h4>
+            <h4><a href="{{url_for('detail', categ = 'other', index = loop.index-1)}}">Acheter</a></h4>
         </div>
     </div>
     {%endfor%}

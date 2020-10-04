@@ -13,7 +13,7 @@ Image.MAX_IMAGE_PIXELS = None
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'b148fa19990c223482e18e1e639f25af'
 
-cred = credentials.Certificate("/Users/sanaaloute/important_files/firebase-sdk.json")
+cred = credentials.Certificate("firebase-sdk.json")
 firebase_admin.initialize_app(cred)
 firestore = firestore.client()
 
@@ -315,7 +315,6 @@ def getBag():
     for doc in data:
         docs.append(doc.to_dict())
     return docs 
-
 
 
 if __name__ == "__main__":
