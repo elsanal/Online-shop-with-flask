@@ -35,7 +35,7 @@ class AddBag(FlaskForm):
     product_name = StringField('Entrer le nom du produit', validators = [DataRequired()])
     product_price = StringField('Entrer le prix du produit', validators = [DataRequired(),])
     description = TextAreaField('Description et caracteristiques du produit',validators = [DataRequired()])
-    pictures = FileField('Choisir les photos du produit')
+    picture = FileField('Choisir les photos du produit')
     order = order
     product_type = 'bag'
     submit = SubmitField('Mettre en ligne')
@@ -44,7 +44,7 @@ class AddClothe(FlaskForm):
     product_name = StringField('Entrer le nom du produit', validators = [DataRequired(), Length(min = 3)])
     product_price = StringField('Entrer le prix du produit', validators = [DataRequired(),])
     description = TextAreaField('Description et caracteristiques du produit',validators = [DataRequired()])
-    pictures = FileField('Choisir les photos du produit')
+    picture = FileField('Choisir les photos du produit')
     order = order
     product_type = 'clothe'
     submit = SubmitField('Mettre en ligne')
@@ -53,7 +53,7 @@ class AddOther(FlaskForm):
     product_name = StringField('Entrer le nom du produit', validators = [DataRequired(), Length(min = 3)])
     product_price = StringField('Entrer le prix du produit', validators = [DataRequired(),])
     description = TextAreaField('Description et caracteristiques du produit',validators = [DataRequired()])
-    pictures = FileField('Choisir les photos du produit')
+    picture = FileField('Choisir les photos du produit')
     order = order
     product_type = 'other'
     submit = SubmitField('Mettre en ligne')
@@ -62,25 +62,25 @@ class AddPant(FlaskForm):
     product_name = StringField('Entrer le nom du produit', validators = [DataRequired(), Length(min = 3)])
     product_price = StringField('Entrer le prix du produit', validators = [DataRequired(),])
     description = TextAreaField('Description et caracteristiques du produit',validators = [DataRequired()])
-    pictures = FileField('Choisir les photos du produit')
+    picture = FileField('Choisir les photos du produit')
     order = order
     product_type = 'pant'
     submit = SubmitField('Mettre en ligne')
     
-class AddSheo(FlaskForm):
+class AddShoe(FlaskForm):
     product_name = StringField('Entrer le nom du produit', validators = [DataRequired(), Length(min = 3)])
     product_price = StringField('Entrer le prix du produit', validators = [DataRequired(),])
     description = TextAreaField('Description et caracteristiques du produit',validators = [DataRequired()])
-    pictures = FileField('Choisir les photos du produit')
+    picture = FileField('Choisir les photos du produit')
     order = order
-    product_type = 'sheo'
+    product_type = 'shoe'
     submit = SubmitField('Mettre en ligne')
     
 class AddWatch(FlaskForm):
     product_name = StringField('Entrer le nom du produit', validators = [DataRequired(), Length(min = 3)])
     product_price = StringField('Entrer le prix du produit', validators = [DataRequired(),])
     description = TextAreaField('Description et caracteristiques du produit',validators = [DataRequired()])
-    pictures = FileField('Choisir les photos du produit')
+    picture = FileField('Choisir les photos du produit')
     order = order
     product_type = 'watch'
     submit = SubmitField('Mettre en ligne')        
@@ -89,7 +89,7 @@ class AddPhone(FlaskForm):
     product_name = StringField('Entrer le nom du produit', validators = [DataRequired(), Length(min = 3)])
     product_price = StringField('Entrer le prix du produit', validators = [DataRequired(),])
     description = TextAreaField('Description et caracteristiques du produit',validators = [DataRequired()])
-    pictures = FileField('Choisir les photos du produit')
+    picture = FileField('Choisir les photos du produit')
     order = order
     product_type = 'phone'
     submit = SubmitField('Mettre en ligne')            

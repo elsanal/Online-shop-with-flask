@@ -56,6 +56,22 @@
     font-size: 40px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 200px;
-    padding-bottom: 200px;
-    
+    padding-bottom: 200px;  
+}
+
+.detail-marge{
+    padding-bottom: 30px;
+}
+
+.detail{
+    background-color: wheat;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 300px 200px 300px;
+    margin: 25px;
+}
+.detail-pic img{
+    width: 250px;
+    height: 300px;
 }

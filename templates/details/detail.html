@@ -1,0 +1,43 @@
+{% extends "home/layout.html" %}
+{% block content %}
+<div class="detail-marge">
+    <div class="detail">
+        <div class="detail-pic">
+            <img src={{docs[index]['picture']}} alt="Artiste de valeur">  
+        </div>
+        <div class="description">
+            <h4>{{docs[index]['product_name']}}</h4>
+            <h4>{{docs[index]['product_price']}}</h4>
+            <h4>{{docs[index]['description']}}</h4>
+        </div>
+        <div class="info-buy">
+            <div class="buy-title">
+                <p>Pour acheter, contactez les numeros suivants : </p>
+            </div>
+            <div class="contact-buy">
+                <p>Mobicash : 660540841</p>
+            </div>
+            <div class="contact-buy">
+                <p>Orange Money : 660540841</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content%}
+{% block suggest %}
+<div class="categorie-title">
+    <p>Suggestion</p>
+</div>
+<div class="categorie">
+    {%for item in docs%}
+    <div class="col-row">
+        <img src={{item['picture']}} alt="">
+        <div class="product-name">
+            <h4>{{item['product_name']}}</h4>
+            <h4>{{item['product_price']}}</h4>
+            <h4><a href="{{url_for('detail', categ = 'bag', index = loop.index-1)}}">Acheter</a></h4>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+{% endblock suggest%}
