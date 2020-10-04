@@ -9,6 +9,12 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+.categorie-title a{
+    padding: 5px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
 
 .categorie{
     display: grid;
@@ -75,3 +81,4 @@
     width: 250px;
     height: 300px;
 }
+

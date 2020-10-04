@@ -33,8 +33,14 @@ body{
 .nav-bar .welcome-search .search-bar{
     margin-left: 5px;
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 150px;
     margin-right: 0px;
+}
+
+.nav-bar .welcome-search .login a{
+    color:red;
+    font-size: 10px;
+    margin-left: 5px;
 }
 
 .nav-bar input{

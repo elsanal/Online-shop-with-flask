@@ -20,10 +20,14 @@
                         <div class="welcome-search">
                             <ul>
                                 <li>
+                                    <div class="login">
+                                        <a href="{{url_for('login')}}">login</a>
+                                    </div>
+                                </li>
+                                <li>
                                     <div class="wlc_msg">
                                         <p>Bienvenue sur Alishop</p>
                                     </div>
-                                    <span><a href="{{url_for('login')}}">admin</a></span>
                                 </li>
                                 <li>
                                     <div class="search-bar">
@@ -32,6 +36,7 @@
                                 </li>
                             </ul>
                         </div>
+                        
                         <div class="main-menu">
                             <ul>
                                 <li><a href="{{url_for('index')}}">Acceuil</a></li>
