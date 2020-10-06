@@ -20,8 +20,7 @@ class New_Item(FlaskForm):
     
 class Login(FlaskForm):
     email = StringField('Entrez votre email', validators = [DataRequired(), Email(),])
-    password = StringField('Entrez votre email', validators = [DataRequired(), Email(),])
-    password = PasswordField('Entrez votre mot de passe', validators = [DataRequired(),Length(min = 8),])
+    password = PasswordField('Entrez votre mot de passe', validators = [DataRequired(),Length(min = 6),])
     submit = SubmitField('Se connecter')
     
 class Register(FlaskForm):

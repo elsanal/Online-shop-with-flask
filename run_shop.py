@@ -215,16 +215,24 @@ def detail(index,categ):
 def register():
     form = Register()
     if form.validate_on_submit():
-        print(form.email)
-        print(form.password)
-        return redirect(url_for('login'))
+        if u'{}'.format(request.form.get('password'))=='123456' and u'{}'.format(request.form.get('email'))=='sana@gmail.com':
+            print(form.email)
+            print(form.password)
+            return redirect(url_for('login'))
     return render_template("/auth/register.html", form = form)
 
 @app.route("/auth/login",methods=['GET', 'POST'])
 def login():
     form = Login()
     if form.validate_on_submit():
-        return redirect(url_for('admin')) 
+        doc = getAdmin()
+        password = doc[0]['password']
+        email1 = doc[0]['email1']
+        email2 = doc[0]['email2']
+        formPassword = u'{}'.format(request.form.get('password'))
+        formEmail = u'{}'.format(request.form.get('email'))
+        if (formEmail==email1 or formEmail == email2) and formPassword==password:
+            return redirect(url_for('admin')) 
     return render_template("auth/login.html", form = form)
 
 @app.route("/upload_items/upload_item", methods=['GET', 'POST'])
@@ -315,7 +323,12 @@ def getBag():
     for doc in data:
         docs.append(doc.to_dict())
     return docs 
-
+def getAdmin():
+    data = firestore.collection(u'admin').get()
+    docs = []
+    for doc in data:
+        docs.append(doc.to_dict())
+    return docs 
 
 if __name__ == "__main__":
     app.run(debug= True)
